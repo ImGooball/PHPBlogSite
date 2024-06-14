@@ -1,4 +1,4 @@
-This blog post was made using:
+This blog site was made using:
 - PHP for server-side scripting
 - MySQL for the database
 - HTML and CSS for the front-end
