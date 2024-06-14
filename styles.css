@@ -1,0 +1,110 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.post {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: left;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.post h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.post p {
+    font-size: 14px;
+    color: #666;
+}
+
+.post .timestamp {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+}
+
+.post a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+form {
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+}
