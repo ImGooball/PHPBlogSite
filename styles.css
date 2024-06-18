@@ -24,7 +24,7 @@ body {
     margin-bottom: 20px;
 }
 
-.post {
+.post, .comment {
     border: 1px solid #ddd;
     margin-bottom: 20px;
     padding: 20px;
@@ -33,18 +33,18 @@ body {
     background-color: #fafafa;
 }
 
-.post h2 {
+.post h2, .comment p {
     margin: 0;
     font-size: 1.5em;
     color: #333;
 }
 
-.post p {
+.post p, .comment p {
     font-size: 14px;
     color: #666;
 }
 
-.post .timestamp {
+.post .timestamp, .comment .timestamp {
     font-size: 12px;
     color: #999;
     margin-top: 10px;
@@ -96,6 +96,7 @@ form label {
 }
 
 form input[type="text"],
+form input[type="password"],
 form textarea {
     width: 100%;
     padding: 10px;
