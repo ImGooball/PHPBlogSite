@@ -1,14 +1,17 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
 // Database connection
 $servername = "localhost:3307";
 $username = "root";
 $password = "";
 $dbname = "gooball_db";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -23,11 +26,15 @@ if ($conn->connect_error) {
     <div class="container">
         <h1>Admin Panel</h1>
         <form method="post" action="save_post.php">
-            <label for="title">Title:</label><br>
-            <input type="text" id="title" name="title" required><br>
-            <label for="content">Content:</label><br>
-            <textarea id="content" name="content" required></textarea><br>
-            <input type="submit" value="Save Post" class="btn">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" class="form-control" required></textarea>
+            </div>
+            <input type="submit" value="Save Post" class="btn btn-primary">
         </form>
     </div>
 </body>

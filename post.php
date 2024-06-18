@@ -1,14 +1,13 @@
 <?php
+session_start();
 // Database connection
 $servername = "localhost:3307";
 $username = "root";
 $password = "";
 $dbname = "gooball_db";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -20,7 +19,7 @@ if ($conn->connect_error) {
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<div class="container">
+    <div class="container">
         <?php
         // Fetch post by ID
         $id = $_GET['id'];
