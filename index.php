@@ -23,11 +23,11 @@ if ($conn->connect_error) {
         <div class="header text-center my-4">
             <h1>Personal Blog</h1>
             <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="admin.php" class="btn btn-primary">Add New Post</a>
-                <a href="logout.php" class="btn btn-secondary">Logout</a>
+                <a href="admin.php" class="btn">Add New Post</a>
+                <a href="logout.php" class="btn">Logout</a>
             <?php else: ?>
-                <a href="login.php" class="btn btn-primary">Login</a>
-                <a href="register.php" class="btn btn-secondary">Register</a>
+                <a href="login.php" class="btn">Login</a>
+                <a href="register.php" class="btn">Register</a>
             <?php endif; ?>
         </div>
         <div class="posts">
@@ -38,12 +38,11 @@ if ($conn->connect_error) {
 
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    echo "<div class='post card mb-4'>";
-                    echo "<div class='card-body'>";
-                    echo "<h2 class='card-title'>" . $row['title'] . "</h2>";
-                    echo "<p class='card-text'>" . substr($row['content'], 0, 200) . "...</p>";
-                    echo "<a href='post.php?id=" . $row['id'] . "' class='btn btn-primary'>Read More</a>";
-                    echo "</div>";
+                    echo "<div class='post'>";
+                    echo "<h2>" . $row['title'] . "</h2>";
+                    echo "<p class='timestamp'>" . $row['created_at'] . "</p>";
+                    echo "<p>" . substr($row['content'], 0, 200) . "...</p>";
+                    echo "<a href='post.php?id=" . $row['id'] . "' class='btn'>Read More</a>";
                     echo "</div>";
                 }
             } else {
