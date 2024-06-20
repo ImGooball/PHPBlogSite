@@ -117,3 +117,16 @@ form textarea {
 form input[type="submit"] {
     margin-top: 20px;
 }
+
+/* Additional styling for the registration link */
+p a.btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00bfff;
+    text-decoration: none;
+}
+
+p a.btn:hover {
+    text-decoration: underline;
+    color: #00a3cc; /* Darker blue on hover */
+}
