@@ -6,8 +6,9 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Change align-items to flex-start */
+    min-height: 100vh;
+    overflow: auto; /* Ensure the page is scrollable */
 }
 
 .container {
@@ -26,7 +27,7 @@ body {
 }
 
 .post, .comment {
-    border: 1px solid #00ff00; /* Matrix-style green */
+    border: 1px solid #00bfff; /* Light blue */
     margin-bottom: 20px;
     padding: 20px;
     text-align: left;
@@ -37,7 +38,7 @@ body {
 .post h2, .comment p {
     margin: 0;
     font-size: 1.5em;
-    color: #00ff00; /* Matrix-style green */
+    color: #00bfff; /* Light blue */
 }
 
 .post p, .comment p {
@@ -52,21 +53,25 @@ body {
 }
 
 .post a {
-    display: block;
-    color: #00ff00; /* Matrix-style green */
+    display: inline-block; /* Change display to inline-block */
+    color: #00bfff; /* Light blue */
     text-decoration: none;
     margin-top: 10px;
+    padding: 5px 10px; /* Add padding */
+    border: 1px solid #00bfff; /* Light blue border */
+    border-radius: 5px; /* Add border radius */
 }
 
 .post a:hover {
-    text-decoration: underline;
+    background-color: #00bfff; /* Light blue on hover */
+    color: #121212; /* Dark background color on hover */
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
     color: #121212;
-    background-color: #00ff00; /* Matrix-style green */
+    background-color: #00bfff; /* Light blue */
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -76,7 +81,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #00cc00; /* Darker green on hover */
+    background-color: #00a3cc; /* Darker blue on hover */
 }
 
 .btn-delete {
@@ -102,7 +107,7 @@ form textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #00ff00; /* Matrix-style green */
+    border: 1px solid #00bfff; /* Light blue */
     border-radius: 5px;
     font-size: 14px;
     background-color: #1e1e1e;
